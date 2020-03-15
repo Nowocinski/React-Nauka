@@ -6,9 +6,8 @@ class HeaderComponent extends React.Component {
 
   sendResetToParent = (event) => {
     this.props.triggerParent('')
-    this.setState({
-      inputText: ''
-    })
+    const element = document.querySelector("input[type='text']")
+    element.value = ''
   }
 
   render() {
